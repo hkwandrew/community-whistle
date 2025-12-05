@@ -1,0 +1,76 @@
+:root {
+  color-scheme: light dark;
+  scroll-behavior: smooth;
+  --color-ink: #1e1e1e;
+  --color-paper: #fff;
+  --color-accent: #004063;
+  --shadow-strong: 10px 8px 0 0 #000;
+  --shadow-medium: 5px 4px 0 0 #000;
+  --shadow-light: 3px 3px 0 0 #000;
+  --border-strong: 2px solid var(--color-ink);
+  --border-regular: 1px solid var(--color-ink);
+  --panel-padding: 80px;
+  color: var(--color-ink);
+  background: var(--color-paper);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.archivo-800 {
+  font-family: "Archivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  line-height: .9;
+  font-variation-settings:
+    "wdth" 62.5;
+}
+
+.roboto-400 {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.roboto-700 {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.roboto-900 {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.text-box {
+    text-box: trim-both cap alphabetic;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--color-ink);
+    background-color: var(--color-paper);
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
