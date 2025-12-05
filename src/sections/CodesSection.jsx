@@ -11,11 +11,12 @@ function CodesSection({ codes, title = 'Codes to Learn' }) {
             <p className="body-large roboto-400">{code.instruction}</p>
             <p className="rhythm roboto-900">{code.rhythm}</p>
           </div>
-          <div className="code-details">
+          <div className="code-details flex-container flex-dir-col">
             {code.details.map((detail) => (
-              <p key={detail} className="body-medium roboto-400">
-                <IconArrow /> {detail}
-              </p>
+              <>
+                <IconArrow />
+                <p key={detail} className="body-medium roboto-400">{detail}</p>
+              </>
             ))}
           </div>
         </article>

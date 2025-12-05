@@ -12,29 +12,31 @@ function ResourcesSection({
   const [resourcesOpen, setResourcesOpen] = useState(false)
 
   return (
-    <section id="resources" className="panel resource-panel">
+    <section id="resources" className="panel flex-container flex-dir-col">
       <h2 className="section-title archivo-800">{title}</h2>
-      <p className="body-medium text-center">
+      <p className="body-medium text-center roboto-400">
         {intro}
       </p>
       <HotlineButton>{hotlineLabel}</HotlineButton>
       <button
         type="button"
-        className="resource-toggle"
+        className="resource-toggle text-center flex-container"
         aria-expanded={resourcesOpen}
         onClick={() => setResourcesOpen((prev) => !prev)}
       >
-        <span className="underline-callout archivo-800">{toggleLabel}</span>
+        <span className="body-xlarge archivo-800">{toggleLabel}</span>
         <IconChevron />
       </button>
-      <div className="local-resources" aria-label="Local resource cards" hidden={!resourcesOpen}>
+      <ul className="local-resources" aria-label="Local resource cards" hidden={!resourcesOpen}>
         {localResources.map((city) => (
-          <a key={city.label} className="local-resource-card archivo-800" href={city.url} target="_blank" rel="noreferrer">
-            <p>{city.label}</p>
-            <IconCallMade />
-          </a>
+          <li className="local-resource-card">
+            <a key={city.label} className="archivo-800" href={city.url} target="_blank" rel="noreferrer">
+              {city.label}
+              <IconCallMade />
+            </a>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   )
 }

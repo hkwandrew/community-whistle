@@ -56,21 +56,52 @@
     "wdth" 100;
 }
 
-.text-box {
-    text-box: trim-both cap alphabetic;
+.body-xlarge {
+  font-size: 40px;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: var(--color-ink);
-    background-color: var(--color-paper);
-  }
+.body-large {
+  font-size: 32px;
+  margin: 0;
+}
 
-  a:hover {
-    color: #747bff;
-  }
+.body-medium {
+  font-size: 24px;
+  margin: 0;
+}
 
-  button {
-    background-color: #f9f9f9;
-  }
+.body-small {
+  font-size: 16px;
+  margin: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-box {
+  text-box: trim-both cap alphabetic;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-dir-col {
+  flex-direction: column;
+}
+
+.flex-dir-row {
+  flex-direction: row;
+}
+
+.underline-callout {
+  text-transform: uppercase;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: 2px;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
 }

@@ -1,5 +1,5 @@
-export const heroImage = '/hero-image.png'
-export const logoImage = '/cw-logo.png'
+export const heroImage = 'hero-image.png'
+export const logoImage = 'cw-logo.png'
 
 export const hotlineUrl = 'https://nnirr.org/education-resources/community-resources-legal-assistance-recursos-comunitarios-asistencia-legal/immigration-hotlines-lineas-directas-de-inmigracion/'
 
@@ -106,7 +106,7 @@ export const contentByLanguage = {
       submit: 'Submit'
     },
     credit: {
-      caption: 'These materials were created by the community for the community. Special thanks to @pilsenartscommunityhouse in Chicago for their generosity!',
+      caption: 'These materials were created by the community for the community. <br />Special thanks to @pilsenartscommunityhouse in Chicago for their generosity!',
       imageAlt: 'Woodcut illustration of a whistle'
     },
     footer: {

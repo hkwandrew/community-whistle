@@ -6,9 +6,11 @@ const CreditSection = ({
 }) => (
   <figure className="credit" aria-labelledby="credit-text">
     <img src={whistleIllustration} alt={imageAlt} />
-    <figcaption id="credit-text" className="body-medium text-center">
-      {caption}
-    </figcaption>
+    <figcaption
+      id="credit-text"
+      className="body-medium roboto-400 text-center"
+      dangerouslySetInnerHTML={{ __html: caption }}
+    />
   </figure>
 )
 

@@ -9,12 +9,14 @@ const SiteFooter = ({
 }) => {
   return (
     <footer className="site-footer">
-      <p>
-        {prompt}
-      </p>
-      <div className="footer-actions">
-        <HotlineButton variant="light">{hotlineLabel}</HotlineButton>
-        <LanguageSelect language={language} onChange={onLanguageChange} inverse />
+      <div className="site-footer-wrapper flex-container flex-dir-row">
+        <p className="body-small roboto-400 text-box">
+          {prompt}
+        </p>
+        <div className="footer-actions">
+          <HotlineButton variant="light">{hotlineLabel}</HotlineButton>
+          <LanguageSelect language={language} onChange={onLanguageChange} inverse />
+        </div>
       </div>
     </footer>
   )

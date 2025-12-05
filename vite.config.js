@@ -7,7 +7,11 @@ const options = {
   fallbacks: ['Arial'],
 }
 
+const repositoryName = process.env.GITHUB_REPOSITORY?.split('/')?.[1]
+const base = repositoryName ? `/${repositoryName}/` : '/'
+
 // https://vite.dev/config/
 export default defineConfig({
+  base,
   plugins: [react(), FontaineTransform.vite(options), svgr()],
 })

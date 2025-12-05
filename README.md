@@ -14,3 +14,10 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## GitHub Pages
+
+- Vite `base` is set from `GITHUB_REPOSITORY`, so the built site works from a repo subpath like `/community-whistle/`.
+- Public image paths are relative (no leading `/`) so assets resolve correctly on GitHub Pages.
+- The contact form runs in demo mode on static builds; set `VITE_CONTACT_ENABLED=true` and point it at a real backend when you are ready.
+- Deploy by enabling Pages for GitHub Actions and letting `.github/workflows/deploy.yml` run on pushes to `main` or via a manual dispatch.
