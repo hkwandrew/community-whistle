@@ -13,10 +13,10 @@ function CodesSection({ codes, title = 'Codes to Learn' }) {
           </div>
           <div className="code-details flex-container flex-dir-col">
             {code.details.map((detail) => (
-              <>
+              <div key={detail} className="code-detail-row body-medium roboto-400">
                 <IconArrow />
-                <p key={detail} className="body-medium roboto-400">{detail}</p>
-              </>
+                <p>{detail}</p>
+              </div>
             ))}
           </div>
         </article>

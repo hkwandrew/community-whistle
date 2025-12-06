@@ -1,15 +1,36 @@
 import { useId } from 'react'
 
-export const IconCheck = () => (
-  <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-    <mask id="mask0_20_2219" style={{ maskType: "alpha", maskUnits: "userSpaceOnUse" }} x="0" y="0" width="28" height="28">
-      <rect width="28" height="28" fill="#D9D9D9" />
-    </mask>
-    <g mask="url(#mask0_20_2219)">
-      <path d="M11.1417 21L4.4917 14.35L6.1542 12.6875L11.1417 17.675L21.8459 6.97083L23.5084 8.63333L11.1417 21Z" fill="#1E1E1E" />
-    </g>
-  </svg>
-)
+export const IconCheck = ({ width = 28, height = 28 }) => {
+  const maskId = useId().replace(/:/g, '')
+
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 28 28"
+      fill="none"
+      role="presentation"
+      aria-hidden="true"
+    >
+      <mask
+        id={maskId}
+        style={{ maskType: 'alpha', maskUnits: 'userSpaceOnUse' }}
+        x="0"
+        y="0"
+        width="28"
+        height="28"
+      >
+        <rect width="28" height="28" fill="#D9D9D9" />
+      </mask>
+      <g mask={`url(#${maskId})`}>
+        <path
+          d="M11.1417 21L4.4917 14.35L6.1542 12.6875L11.1417 17.675L21.8459 6.97083L23.5084 8.63333L11.1417 21Z"
+          fill="#1E1E1E"
+        />
+      </g>
+    </svg>
+  )
+}
 
 export const IconArrow = () => (
   <svg width="28" height="28" viewBox="0 0 28 28" fill="none">

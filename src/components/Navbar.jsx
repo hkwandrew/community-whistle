@@ -14,6 +14,7 @@ const Navbar = ({
 }) => {
   const [menuOpen, setMenuOpen] = useState(false)
   const navListId = 'primary-nav-links'
+  const mobileNavListId = `${navListId}-mobile`
 
   const handleLinkClick = (href) => {
     onNavClick(href)
@@ -25,7 +26,7 @@ const Navbar = ({
   return (
     <div className={`nav-wrapper ${menuOpen ? 'is-open' : ''}`}>
       <header className="nav-bar">
-        <div className="nav-logo" aria-hidden="true">
+        <div className="nav-logo">
           <img src={logoImage} alt="Community whistle logo" />
         </div>
         <nav aria-label="Primary navigation">
@@ -53,16 +54,16 @@ const Navbar = ({
             className="nav-menu-button"
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
-            aria-controls={navListId}
+            aria-controls={mobileNavListId}
             onClick={toggleMenu}
           >
             <IconMenu />
           </button>
         </div>
-      </header>
+      </header >
       <div className={`mobile-menu ${menuOpen ? 'is-open' : ''}`} role="dialog" aria-modal="true" aria-label="Mobile navigation">
         <div className="mobile-menu__top">
-          <div className="nav-logo" aria-hidden="true">
+          <div className="nav-logo">
             <img src={logoImage} alt="Community whistle logo" />
           </div>
           <button
@@ -75,7 +76,7 @@ const Navbar = ({
           </button>
         </div>
         <nav aria-label="Mobile navigation">
-          <ul className="mobile-nav-links" id={`${navListId}-mobile`}>
+          <ul className="mobile-nav-links" id={mobileNavListId}>
             {navLinks.map((link) => (
               <li key={link.href} className="mobile-nav-item">
                 <a
@@ -99,7 +100,7 @@ const Navbar = ({
           <LanguageSelect language={language} onChange={onLanguageChange} />
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 

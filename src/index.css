@@ -19,8 +19,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: "Archivo Narrow-fallback";
+  size-adjust: 82.59%;
+  ascent-override: 138%;
+  src: local("Arial");
+}
+
+@font-face {
+  font-family: "Roboto-fallback";
+  size-adjust: 100.1%;
+  ascent-override: 93%;
+  src: local("Arial");
+}
+
 .archivo-800 {
-  font-family: "Archivo", sans-serif;
+  font-family: "Archivo", "Archivo Narrow-fallback", sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
@@ -30,7 +44,7 @@
 }
 
 .roboto-400 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Roboto-fallback", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -39,7 +53,7 @@
 }
 
 .roboto-700 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Roboto-fallback", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
@@ -48,13 +62,15 @@
 }
 
 .roboto-900 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Roboto-fallback", sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
 }
+
+
 
 .body-xlarge {
   font-size: 40px;
